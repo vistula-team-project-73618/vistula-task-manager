@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task Manager</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 640px; margin: 2rem auto; padding: 0 1rem; line-height: 1.4; }
+    h1 { margin-bottom: 0.25rem; }
+    #task-form { display: flex; flex-direction: column; gap: 0.5rem; margin: 1.5rem 0 1rem; }
+    #task-form input { padding: 0.5rem; font-size: 1rem; }
+    button { padding: 0.4rem 0.8rem; font-size: 0.95rem; cursor: pointer; }
+    #status-message { min-height: 1.5rem; color: #b00020; }
+    .task-item { border: 1px solid #ccc; border-radius: 6px; padding: 0.75rem; margin-bottom: 0.5rem; }
+    .task-title { font-weight: 600; }
+    .task-description { color: #555; margin: 0.25rem 0; }
+    .task-status { font-size: 0.85rem; margin-bottom: 0.5rem; }
+    .task-item.done .task-title { text-decoration: line-through; color: #777; }
+  </style>
+</head>
+<body>
+  <h1>Task Manager</h1>
+  <p>Student ID: <span id="student-id">YOUR_STUDENT_ID</span></p>
 
+  <form id="task-form">
+    <input type="text" id="task-title" placeholder="Task title" required>
+    <input type="text" id="task-description" placeholder="Description (optional)">
+    <div>
+      <button type="submit" id="task-submit">Add task</button>
+      <button type="button" id="task-cancel" hidden>Cancel edit</button>
+    </div>
+  </form>
+
+  <p id="status-message"></p>
+
+  <div id="task-list"></div>
+
+  <p><a id="contribution-link" href="contribution.html">Team contribution page</a></p>
+
+  <script src="app.js"></script>
+</body>
+</html>
